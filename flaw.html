@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Flow — система баг-трекинга и управления проектами | Оксана Голубева</title>
+<meta content="Кейс: Flow — система баг-трекинга и управления проектами разработки ПО. Product/UX-UI дизайн Оксаны Голубевой." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="styles.css" rel="stylesheet"/>
+</head>
+<body>
+<header>
+<div class="wrap inner">
+<nav class="nav-primary">
+<a href="index.html">Главная</a>
+<a href="index.html#cases">Продуктовые кейсы</a>
+<a href="index.html#lendings">Лендинги</a>
+</nav>
+<div class="nav-secondary">
+<a class="nav-text" href="https://drive.google.com/file/d/1Tp7GR92xKcT-lRftsW4J7q3wKh2T5zn_/view?usp=drive_link" target="_blank" rel="noopener">резюме</a>
+<a class="nav-text email-copy" href="mailto:3733260@gmail.com">email</a>
+<a class="nav-tg-btn" href="https://t.me/holubevaaksana" target="_blank" rel="noopener">Написать в телеграмм</a>
+</div>
+</div>
+</header>
+<div class="wrap" style="padding-top:100px;">
+<a class="back-link" href="index.html">← Все кейсы</a>
+</div>
+<div class="wrap" style="margin-top:56px;">
+  <img class="cover-top-img" src="assets/flaw-full/cover.jpg" alt="Flow">
+</div>
+<div class="wrap" style="margin-top:56px;">
+<div class="hero-plate flaw-hero">
+<div class="case-intro-grid">
+<div class="case-intro-text">
+<h1 class="case-title">Flow — система баг-трекинга и управления проектами разработки ПО</h1>
+<p class="case-desc">Flow — это система баг-трекинга и управления проектами разработки ПО, спроектированная для разработчиков, QA и PM. Flow — не система с зафиксированным процессом, а конструктор статусной модели под чужой процесс.</p>
+</div>
+</div>
+<div class="case-red-content">
+<img alt="" class="case-photo-cutout" src="assets/flaw-hero/photo.png"/>
+<div class="case-stats">
+<div class="stat-row"><span class="stat-label">Должность</span><span class="stat-value">Product / UX-UI дизайнер</span></div>
+<div class="stat-row"><span class="stat-label">Срок</span><span class="stat-value">4 месяца</span></div>
+<div class="stat-row"><span class="stat-label">Объём работы</span><span class="stat-value">25+ экранов</span></div>
+</div>
+<div class="case-cards">
+<div class="case-card">
+<img alt="" class="case-card-icon" src="assets/flaw-hero/icon-role.png"/>
+<p><b>Роль:</b> UX/UI-дизайнер — единственный дизайнер в команде из 8 человек, 4 месяца от первого экрана до передачи в разработку, методология Waterfall.</p>
+</div>
+<div class="case-card">
+<img alt="" class="case-card-icon" src="assets/flaw-hero/icon-product.png"/>
+<p><b>Продукт:</b> Система баг-трекинга и управления проектами разработки ПО: рабочие таблицы, доски Kanban/Scrum, документация, UI Kit — единая архитектура.</p>
+</div>
+<div class="case-card">
+<img alt="" class="case-card-icon" src="assets/flaw-hero/icon-users.png"/>
+<p><b>Пользователи:</b> Разработчики, QA-инженеры, проектные и продуктовые менеджеры — вся команда разработки ПО, без разграничения ролей по доступу.</p>
+</div>
+<div class="case-card">
+<img alt="" class="case-card-icon" src="assets/flaw-hero/icon-task.png"/>
+<p><b>Задача:</b> Спроектировать с нуля продукт для QA и управления проектами разработки, поддерживающий Kanban и Scrum на единой архитектуре данных.</p>
+</div>
+<div class="case-card">
+<img alt="" class="case-card-icon" src="assets/flaw-hero/icon-feature.png"/>
+<p><b>Особенность:</b> Kanban и Scrum — поверх одной структуры данных. Статусы ветвятся по типу сущности: у бага — цикл с повтором, у задачи — линейный путь.</p>
+</div>
+<div class="case-card">
+<img alt="" class="case-card-icon" src="assets/flaw-hero/icon-done.png"/>
+<p><b>Что сделано:</b> 8 групп экранов, ~30 компонентных семейств UI-кита в светлой и тёмной теме, адаптив на 4 брейкпоинта. Продукт доведён до MVP.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="wrap" id="flaw" style="margin-top:80px;">
+<div class="block reveal"><div class="screens-plate">
+<div class="plate-head">
+<span class="block-tag">Контекст</span>
+<h2 class="block-h">О продукте</h2>
+<p class="block-p">Продукт является системой баг-трекинга, позволяющей выбрать методологию Kanban или Scrum с общей нижней частью экрана (Backlog и таблица issue) и разным способом организации верхней части экрана (доска Kanban или доска спринта), не дублируя архитектуру данных под каждую методологию отдельно. Поверх этого — настраиваемая статусная модель и workflow под конкретный бизнес или вид деятельности. Иерархия сущностей (issue → story → epic → project → sprint → board → team) при этом остаётся фиксированной. Отсюда и отсутствие прямых референсов при проектировании ряда фич — приходилось не копировать чужие паттерны, а создавать собственные.</p>
+<p class="block-p">Проект Flow стартовал без детального технического задания, только общее видение фаундера. Мне нужно было самостоятельно превратить неформализованное видение в конкретную архитектуру интерфейса, покрывающую все ключевые сущности продукта от issue до команд и спринтов.</p>
+</div>
+<div class="subsection">
+<h3 class="subsection-h">Архитектура, которую спроектировала</h3>
+<ol class="spec-list spec-ol">
+<li><span class="spec-label">Авторизация</span><span class="spec-dash">–</span><span class="spec-desc">Sign in, Sign up, Restore password</span></li>
+<li><span class="spec-label">Kanban и Scrum доски</span><span class="spec-dash">–</span><span class="spec-desc">общая структура Board + resizable Backlog + таблица issue, с методологически разным верхним блоком (Board Kanban / Board Sprint)</span></li>
+<li><span class="spec-label">Автоматизация</span><span class="spec-dash">–</span><span class="spec-desc">конструктор правил на условиях и действиях (Conditions → Actions) с операторами сравнения, применяется к issue, story и внешним группам</span></li>
+<li><span class="spec-label">UI-кит</span><span class="spec-dash">–</span><span class="spec-desc">порядка 30 компонентных семейств, полная типографическая шкала, инпуты с матрицей из 5 состояний × 3 статуса × icon/helper/label</span></li>
+<li><span class="spec-label">Рабочие таблицы</span><span class="spec-dash">–</span><span class="spec-desc">7 сущностей — issue, story, epic, project, sprint, board, team</span></li>
+<li><span class="spec-label">Создание, комментарии и история изменений</span><span class="spec-dash">–</span><span class="spec-desc">issue через модальное окно (основной и дополнительный экраны, hover-состояния), просмотр и редактирование issue с историей изменений и комментариями</span></li>
+<li><span class="spec-label">Документационная система</span><span class="spec-dash">–</span><span class="spec-desc">мультиязычная база знаний — вложенная навигация Section → Subsection → страница, поиск, breadcrumbs, якорная навигация по странице, inline-уведомления, переходы Prev/Next</span></li>
+<li><span class="spec-label">Адаптивная сетка</span><span class="spec-dash">–</span><span class="spec-desc">4 брейкпоинта — 768 / 1024 / 1280 / 1440</span></li>
+<li><span class="spec-label">Письма для рассылки</span><span class="spec-dash">–</span><span class="spec-desc">5 шаблонов — приглашение в систему, восстановление пароля, регистрация, активация аккаунта, приглашение создать первую задачу</span></li>
+<li><span class="spec-label">Языковая локализация продукта</span><span class="spec-dash">–</span><span class="spec-desc">5 языков — EN, RU, Belarusian, French, Polish</span></li>
+<li><span class="spec-label">Локализованные онбординг-состояния</span><span class="spec-dash">–</span><span class="spec-desc">например, пустое состояние спринта проработано в нескольких вариантах формулировок на двух языках. Страница 404</span></li>
+<li><span class="spec-label">Тёмная тема</span><span class="spec-dash">–</span><span class="spec-desc">параллельная цветовая система, компоненты (включая кнопки) в day/night вариантах, тёмный фон на готовых экранах досок</span></li>
+</ol>
+</div>
+<div class="subsection">
+<h3 class="subsection-h">Ключевые решения</h3>
+<p class="subsection-p">Ключевое архитектурное решение: не проектировать под один фиксированный процесс, а поддержать сразу две методологии — Kanban и Scrum — поверх единой структуры данных, плюс настраиваемую статусную модель, которая зависит от типа сущности: у бага статусная цепочка ветвится, у задачи — короткий линейный путь.</p>
+</div>
+</div></div>
+<div class="block reveal"><div class="screens-plate">
+<div class="plate-head">
+<span class="block-tag">Фундамент</span>
+<h2 class="block-h">Дизайн-система</h2>
+<p class="block-p">Параллельно с продуктовыми задачами я развивала дизайн-систему продукта: порядка 30 компонентных семейств (кнопки, инпуты, дропдауны, теги, статусы и другие), единая типографическая шкала (H1–H6, Body, Caption) и цветовая палитра для обеих тем. Каждый компонент спроектирован с полным набором состояний (default / hover / active / disabled), что позволяло переиспользовать систему во всех группах экранов без визуальных расхождений.</p>
+</div>
+<div class="plate-images"><figure><img src="assets/flaw-full/ui-kit.jpg" alt="" loading="lazy"></figure></div>
+<div class="subsection">
+<h3 class="subsection-h">Адаптивность</h3>
+<p class="subsection-p">Интерфейс спроектирован на 4 брейкпоинта — 768 / 1024 / 1280 / 1440, включая collapse/expand-состояния навигации для широких экранов. Мобильная версия (менее 768 px) не проектировалась. Эти ограничения — результат приоритизации, команда сознательно сузила скоуп ради выхода MVP в срок.</p>
+<div class="plate-images"><figure><img src="assets/flaw-full/responsive.jpg" alt="" loading="lazy"></figure></div>
+</div>
+<div class="subsection">
+<h3 class="subsection-h">Тёмная тема</h3>
+<p class="subsection-p">Полная параллельная со светлой темой проработка тёмной темы для системы и компонентов в day/night вариантах.</p>
+<div class="plate-images"><figure><img src="assets/flaw-full/theme-light-dark.jpg" alt="" loading="lazy"></figure></div>
+</div>
+</div></div>
+<div class="block reveal"><div class="screens-plate">
+<div class="plate-head">
+<span class="block-tag">Вход</span>
+<h2 class="block-h">Авторизация</h2>
+<p class="block-p">Sign in, Sign up, Restore password — единая точка входа для всей команды, без разграничения ролей на этом уровне.</p>
+</div>
+<div class="plate-images"><figure><img alt="" loading="lazy" src="assets/flaw-full/auth.jpg"/></figure></div>
+</div></div>
+<div class="block reveal"><div class="screens-plate">
+<div class="plate-head">
+<span class="block-tag">Доски</span>
+<h2 class="block-h">Доска: Kanban и Scrum</h2>
+<p class="block-p">Общая структура Board + Backlog, но разный верхний блок в зависимости от выбранной методологии — ключевая архитектурная идея всего кейса.</p>
+</div>
+<div class="plate-images">
+<figure><img alt="" loading="lazy" src="assets/flaw-full/board-kanban.jpg"/><figcaption>Kanban</figcaption></figure>
+<figure style="margin-top:24px;"><img alt="" loading="lazy" src="assets/flaw-full/board-scrum.jpg"/><figcaption>Scrum</figcaption></figure>
+</div>
+</div></div>
+<div class="block reveal"><div class="screens-plate">
+<div class="plate-head">
+<span class="block-tag">Автоматизация</span>
+<h2 class="block-h">Конструктор правил</h2>
+<p class="block-p">Отдельный no-code-слой поверх статусной модели: правило собирается из условий (Conditions) и действий (Actions) с операторами сравнения — is equal, contains, does not begin with, is not null и другими. Правила применяются к сущностям (issue, story) и внешним группам, включаются и выключаются без удаления, список правил ведёт историю созданного.</p>
+</div>
+<div class="plate-images">
+<figure><img alt="" loading="lazy" src="assets/flaw-full/automatization.jpg"/><figcaption>Автоматизация</figcaption></figure>
+</div>
+</div></div>
+<div class="block reveal"><div class="screens-plate">
+<div class="plate-head">
+<span class="block-tag">Таблицы</span>
+<h2 class="block-h">Рабочие таблицы сущностей</h2>
+<p class="block-p">Issue, story, epic, project, sprint, board, team — показаны 2–3 характерные таблицы (issue и sprint): раздел про масштаб, а не про полноту.</p>
+</div>
+<div class="plate-images"><figure><img src="assets/flaw-full/entity-table.jpg" alt="" loading="lazy"><figcaption>Рабочая таблица</figcaption></figure></div>
+</div></div>
+<div class="block reveal"><div class="screens-plate">
+<div class="plate-head">
+<span class="block-tag">Issue</span>
+<h2 class="block-h">Создание и редактирование issue</h2>
+<p class="block-p">Модальное создание issue, просмотр/редактирование с историей изменений и комментариями — здесь показана глубина проработки одного сценария полностью, а не поверхностно все сразу.</p>
+</div>
+<div class="plate-images">
+<figure><img alt="" loading="lazy" src="assets/flaw-full/issue-create.jpg"/><figcaption>Создание issue</figcaption></figure>
+<figure style="margin-top:24px;"><img alt="" loading="lazy" src="assets/flaw-full/issue-edit.jpg"/><figcaption>Редактирование</figcaption></figure>
+<figure style="margin-top:24px;"><img alt="" loading="lazy" src="assets/flaw-full/issue-history.jpg"/><figcaption>История изменений</figcaption></figure>
+<figure style="margin-top:24px;"><img alt="" loading="lazy" src="assets/flaw-full/issue-comments.jpg"/><figcaption>Комментарии</figcaption></figure>
+</div>
+</div></div>
+<div class="block reveal"><div class="screens-plate">
+<div class="plate-head">
+<span class="block-tag">База знаний</span>
+<h2 class="block-h">Документационная система</h2>
+<p class="block-p">Мультиязычная база знаний на 5 языках — сильная деталь, которой обычно нет в трекерах такого масштаба. Вложенная навигация до 3 уровней (Section → Subsection → страница), якорное оглавление справа, блоки кода с подсветкой синтаксиса для API-примеров (GraphQL mutations), inline-компоненты предупреждений.</p>
+</div>
+<div class="plate-images">
+<figure><img alt="" loading="lazy" src="assets/flaw-full/docs-detail.jpg"/></figure>
+</div>
+</div></div>
+<div class="block reveal"><div class="screens-plate">
+<div class="plate-head">
+<span class="block-tag">Рассылка</span>
+<h2 class="block-h">Письма рассылки</h2>
+<p class="block-p">Три ключевых сценария из пяти: приглашение в систему, активация аккаунта после регистрации, призыв создать первую задачу — вспомогательный, но живой слой продукта.</p>
+</div>
+<div class="plate-images"><figure><img alt="" loading="lazy" src="assets/flaw-full/emails.png"/></figure></div>
+</div></div>
+<div class="block reveal"><div class="screens-plate">
+<div class="plate-head">
+<span class="block-tag">Процесс</span>
+<h2 class="block-h">Процесс и передача в разработку</h2>
+</div>
+<ul class="punch-list">
+<li>Проводила анализ конкурентов и практик в сфере project- и QA-менеджмента для обоснования дизайн-решений</li>
+<li>Регулярно взаимодействовала с PM для формализации требований при отсутствии детального ТЗ</li>
+<li>Разработала фирменный стиль и логотип — концепция родилась на совместном брейншторме с командой</li>
+<li>Собрала UI-кит (кнопки, иконки, формы, палитра, типографика) с параллельной полной проработкой светлой и тёмной темы</li>
+<li>Спроектировала 8 групп экранов: авторизация, рабочие таблицы (issue/story/epic/project/sprint/board/team), создание и редактирование issue, мультиязычная документационная система с поиском, работа с вложениями, письма рассылки, 404</li>
+<li>Проработала адаптивную сетку на 4 брейкпоинта (768/1024/1280/1440)</li>
+<li>Постоянно сверяла решения с техническими возможностями фронтенда</li>
+<li>Аргументировала решения перед фаундером и командой, когда бизнес-требование противоречило удобству использования</li>
+<li>Проводила самостоятельную проверку экранов на логику и юзабилити перед передачей в разработку</li>
+</ul>
+</div></div>
+<div class="block reveal"><div class="screens-plate">
+<div class="plate-head">
+<span class="block-tag">Итог</span>
+<h2 class="block-h">Результат</h2>
+<p class="block-p">Проект дал опыт полного цикла продуктового дизайна в условиях неопределённости: без готового ТЗ, без референсов для части фич, с прямой зависимостью от технических возможностей команды разработки. Работа по Waterfall-методологии потребовала точной фиксации решений на старте и умения формализовывать неявные требования фаундера в конкретную архитектуру интерфейса.</p>
+<p class="block-p">Продукт за 4 месяца доведён до MVP, а дизайн-система осталась согласованной с тем, что команда физически могла реализовать на данном этапе. Дальнейшая судьба проекта неизвестна, по имеющимся данным используется фаундером во внутренних проектах.</p>
+</div>
+<div class="plate-images"><figure><img src="assets/flaw-full/result.jpg" alt="" loading="lazy" style="border-radius:16px;"></figure></div>
+</div></div>
+</div>
+<footer>
+<div class="wrap">
+<h2>Готова присоединиться к сильной команде!<br/><span class="word-ellipse ellipse-svyazhites"><b>Свяжитесь</b><svg width="274" height="87" viewBox="0 0 274 87" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M134.797 1.35444C172.445 -0.17267 206.693 3.3124 231.622 10.3086C244.091 13.8083 254.172 18.1706 261.175 23.18C268.189 28.1963 271.976 33.7534 272.215 39.6357C272.453 45.5157 269.223 51.0933 262.796 56.2567C256.368 61.4202 246.867 66.0609 234.905 70.0352C210.993 77.9797 177.503 83.1781 139.835 84.7061C102.168 86.234 67.5567 83.7984 42.2679 77.8472C29.6168 74.87 19.3638 71.0279 12.2347 66.4085C5.0982 61.7844 1.25056 56.4941 1.01296 50.6365C0.774466 44.7536 4.09544 38.9084 10.6715 33.3412C17.2387 27.7814 26.9224 22.6173 39.0574 18.1196C63.3167 9.12825 97.1496 2.88157 134.797 1.35444Z" stroke="url(#paint0_linear_6170_7429)" stroke-width="2"/><defs><linearGradient id="paint0_linear_6170_7429" x1="0.013275" y1="50.6775" x2="273.214" y2="39.5956" gradientUnits="userSpaceOnUse"><stop stop-color="#F3EDE4"/><stop offset="0.548077" stop-color="#C09D4E"/></linearGradient></defs></svg></span> со мной<img class="avatar-badge" src="assets/decor/avatar-badge.svg" alt=""> удобным способом<img class="message-icon" src="assets/decor/message-icon.svg" alt=""></h2>
+<div class="flinks">
+<a href="https://t.me/holubevaaksana" rel="noopener" target="_blank">telegram</a><a href="mailto:3733260@gmail.com" class="email-copy">email</a><a href="https://www.instagram.com/o.golubeva.designer/" rel="noopener" target="_blank">instagram</a><a href="https://drive.google.com/file/d/1Tp7GR92xKcT-lRftsW4J7q3wKh2T5zn_/view?usp=drive_link" target="_blank" rel="noopener">резюме</a>
+</div>
+<div class="fend">Оксана Голубева — Product / UX/UI Designer</div>
+</div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
