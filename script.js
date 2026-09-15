@@ -150,3 +150,30 @@ document.querySelectorAll('.email-copy').forEach(link => {
     }
   });
 });
+
+// Мобильное бургер-меню
+(() => {
+  const btn = document.getElementById('burgerBtn');
+  const menu = document.getElementById('mobileMenu');
+  if (!btn || !menu) return;
+
+  const closeMenu = () => {
+    btn.classList.remove('open');
+    menu.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+  };
+
+  btn.addEventListener('click', () => {
+    const isOpen = menu.classList.toggle('open');
+    btn.classList.toggle('open', isOpen);
+    btn.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  menu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeMenu();
+  });
+})();
