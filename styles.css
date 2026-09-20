@@ -102,7 +102,7 @@ header .inner{display:flex;justify-content:space-between;align-items:center;widt
 .case-tile-logo{height:56px;width:auto;display:block;align-self:flex-start;}
 .case-tile-tag{font-family:var(--mono);font-size:11px;color:var(--gold);text-transform:uppercase;letter-spacing:.08em;}
 .case-tile-title{font-family:var(--sans);font-size:36px;font-weight:700;line-height:1.2;margin-top:32px;max-width:352px;}
-.case-tile-desc{font-family:var(--sans);font-size:16px;line-height:20px;margin-top:24px;max-width:352px;}
+.case-tile-desc{font-family:var(--sans);font-size:16px;font-weight:400;line-height:20px;margin-top:24px;max-width:352px;}
 .case-tile-desc + .case-tile-desc{margin-top:16px;}
 .case-tile-link{font-family:var(--mono);font-size:13px;color:var(--text);margin-top:20px;}
 @media(max-width:640px){
@@ -137,7 +137,7 @@ header .inner{display:flex;justify-content:space-between;align-items:center;widt
 .tags .pill{font-weight:600;color:var(--text);}
 h1.hero-h{font-family:var(--serif);font-weight:500;font-size:42px;line-height:1.43;letter-spacing:-.005em;max-width:760px;color:var(--text);}
 @media(max-width:640px){h1.hero-h{font-size:26px;}}
-h1.hero-h .grad-text{color:#C6A250;}
+h1.hero-h .grad-text{color:var(--text);}
 h1.hero-h .grad-text b{font-weight:600;}
 .word-ellipse{position:relative;display:inline-block;}
 .word-ellipse svg{display:none;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none;overflow:visible;}
