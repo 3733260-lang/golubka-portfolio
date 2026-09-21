@@ -107,10 +107,10 @@ header .inner{display:flex;justify-content:space-between;align-items:center;widt
 .case-tile-link{font-family:var(--mono);font-size:13px;color:var(--text);margin-top:20px;}
 @media(max-width:640px){
   .case-tile{height:296px;padding-top:0;}
-  .tile-matreshka{background-image:url(assets/decor/covers-mobile/matreshka.jpg)!important;background-size:cover!important;background-position:left top!important;}
-  .tile-flightbuddy{background-image:url(assets/decor/covers-mobile/flightbuddy.jpg)!important;background-size:cover!important;background-position:left top!important;}
-  .tile-visa{background-image:url(assets/decor/covers-mobile/visa.jpg)!important;background-size:cover!important;background-position:left top!important;}
-  .tile-flaw{background-image:url(assets/decor/covers-mobile/flaw.jpg)!important;background-size:cover!important;background-position:left top!important;}
+  .tile-matreshka{background-image:url(assets/decor/covers-mobile/matreshka.jpg)!important;background-size:398px 296px!important;background-position:left top!important;}
+  .tile-flightbuddy{background-image:url(assets/decor/covers-mobile/flightbuddy.jpg)!important;background-size:398px 296px!important;background-position:left top!important;}
+  .tile-visa{background-image:url(assets/decor/covers-mobile/visa.jpg)!important;background-size:398px 296px!important;background-position:left top!important;}
+  .tile-flaw{background-image:url(assets/decor/covers-mobile/flaw.jpg)!important;background-size:398px 296px!important;background-position:left top!important;}
   .tile-matreshka .case-tile-logo,.tile-flaw .case-tile-logo{height:32px!important;}
   .tile-flightbuddy .case-tile-logo,.tile-visa .case-tile-logo{height:42px!important;}
   .case-tile-content{padding:24px;}
@@ -119,6 +119,7 @@ header .inner{display:flex;justify-content:space-between;align-items:center;widt
   .case-tile-desc + .case-tile-desc{display:none;}
   .case-tile-link{margin-top:10px;font-size:12px;}
 }
+
 .hero-glow{position:absolute;top:6%;right:-6%;width:420px;height:420px;border-radius:50%;
   background:radial-gradient(circle, rgba(198,162,80,.35), rgba(198,162,80,0) 70%);filter:blur(10px);pointer-events:none;
   animation:drift 12s ease-in-out infinite;}
