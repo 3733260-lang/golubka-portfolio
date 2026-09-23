@@ -199,14 +199,14 @@ section{position:relative;padding:0;}
 .flow-logo-wrap img{max-width:214px;}
 
 .case-red-content{position:relative;z-index:2;margin-top:56px;min-height:760px;}
-.case-photo-cutout{position:absolute;top:-56px;bottom:-56px;right:-56px;height:calc(100% + 112px);width:auto;max-width:none;object-fit:cover;object-position:top right;z-index:1;pointer-events:none;}
+.case-photo-cutout{display:none;position:absolute;top:-56px;bottom:-56px;right:-56px;height:calc(100% + 112px);width:auto;max-width:none;object-fit:cover;object-position:top right;z-index:1;pointer-events:none;}
 
 .case-stats{display:flex;flex-direction:column;gap:26px;position:relative;z-index:2;}
 .stat-label{display:block;font-family:var(--sans);font-weight:400;font-size:var(--case-stat-label-size);color:var(--case-stat-label-color);}
 .stat-value{display:block;font-family:var(--sans);font-weight:700;font-size:var(--case-stat-value-size);color:var(--case-stat-value-color);margin-top:4px;}
 
-.case-cards{display:flex;flex-direction:column;gap:24px;margin-top:56px;position:relative;z-index:2;}
-.case-card{background:rgba(255,255,255,.2);backdrop-filter:blur(200px);-webkit-backdrop-filter:blur(200px);border-radius:14px;padding:16px 32px 16px 16px;display:flex;align-items:center;gap:24px;width:597px;max-width:100%;height:96px;box-sizing:border-box;overflow:hidden;
+.case-cards{display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:150px;gap:24px;margin-top:56px;position:relative;z-index:2;}
+.case-card{background:rgba(255,255,255,.2);backdrop-filter:blur(200px);-webkit-backdrop-filter:blur(200px);border-radius:14px;padding:16px 32px 16px 16px;display:flex;align-items:center;gap:24px;width:100%;max-width:100%;height:100%;box-sizing:border-box;
   box-shadow:
     0px 175px 70px 0px rgba(71,69,67,.01),
     0px 99px 59px 0px rgba(71,69,67,.05),
@@ -224,7 +224,7 @@ section{position:relative;padding:0;}
   .hero-plate{padding:28px;}
   .case-photo-cutout{display:none;}
   .case-card{width:100%;height:auto;}
-  .case-cards{margin-top:32px;}
+  .case-cards{margin-top:32px;grid-template-columns:1fr;grid-auto-rows:auto;}
   .case-red-content{min-height:auto;margin-top:32px;}
 }
 .cover-card{
